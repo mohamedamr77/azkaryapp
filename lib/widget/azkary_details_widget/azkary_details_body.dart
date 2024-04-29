@@ -1,4 +1,3 @@
-import 'package:azkary/data_variable/list_azkar.dart';
 import 'package:flutter/material.dart';
 import 'package:getwidget/getwidget.dart';
 import '../../core/image_core.dart';
@@ -39,7 +38,6 @@ class _CutomAzkaryDetailsState extends State<CutomAzkaryDetails> {
         ),
         child: CustomScrollView(
           slivers: [
-
             SliverAppBar(
               title:Text(
                 "${widget.title_appbar}",
@@ -61,7 +59,6 @@ class _CutomAzkaryDetailsState extends State<CutomAzkaryDetails> {
               elevation: 0,
               backgroundColor: Colors.transparent,
             ),
-
             SliverList.separated(
               itemBuilder: (BuildContext context, int index) =>Container(child: Column(
                   textDirection: TextDirection.rtl,
@@ -73,7 +70,7 @@ class _CutomAzkaryDetailsState extends State<CutomAzkaryDetails> {
                   color: Color(0xff9E9660),
                   borderRadius: BorderRadius.circular(20),
                   ),
-                     child: Text('''${zekrList[index].title}''',
+                     child: Text('''${zekrList[index].title.trim()}''',
                      textDirection: TextDirection.rtl,
                   ),
                     ),
@@ -85,7 +82,6 @@ class _CutomAzkaryDetailsState extends State<CutomAzkaryDetails> {
                      if(zekrList[index].number>0){
                        zekrList[index].number--;
                      }
-
                    });
                   },
                   text: 'عدد مرات التكرار',

@@ -34,13 +34,21 @@ class CustomAzkaryItem extends StatelessWidget {
               title_appbar: "اذكار النوم",
             ):
             index==5?   CutomAzkaryDetails(
+              models: azkarList.where((title) =>title.title=="afterPraying Azkar" ).toList(),
+              title_appbar: "اذكار بعد الصلاة",
+            ):
+            index==6?    CutomAzkaryDetails(
               models: azkarList.where((title) =>title.title=="getOut Azkar" ).toList(),
               title_appbar: "اذكار النوم",
             ):
-              CutomAzkaryDetails(
-              models: azkarList.where((title) =>title.title=="getOut Azkar" ).toList(),
-              title_appbar: "اذكار النوم",
-            )
+             index==7?   CutomAzkaryDetails(
+               models: azkarList.where((title) =>title.title=="eating Azkar" ).toList(),
+               title_appbar: "اذكار الطعام",
+             ):
+             CutomAzkaryDetails(
+               models: azkarList.where((title) =>title.title=="islamic Azkar" ).toList(),
+               title_appbar: "الرقيه الشرعيه",
+             )
         )
         );
       },
