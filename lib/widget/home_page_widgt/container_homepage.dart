@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 
-import '../../core/image_core.dart';
-import '../../core/text_core.dart';
 
 class CustomContainerHomePage extends StatelessWidget {
   String image;

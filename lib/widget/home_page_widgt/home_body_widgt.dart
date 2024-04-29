@@ -73,7 +73,7 @@ class CustomHomeBody extends StatelessWidget {
               SizedBox(width: 20),
               CustomContainerHomePage(
                 onTap: (){
-                  Navigator.push(context, MaterialPageRoute(builder: (context) =>QiblaScreen(),));
+                  Navigator.push(context, MaterialPageRoute(builder: (context) =>QiblahPage(),));
                 },
                 image: AppImage.qibla_Image,
                 text: AppText.qiblaContainer_text,

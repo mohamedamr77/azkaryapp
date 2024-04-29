@@ -10,7 +10,8 @@ class CustomAzkaryBody extends StatelessWidget {
     return  Scaffold(
       extendBodyBehindAppBar: true,
          body: Container(
-        decoration: BoxDecoration(
+        decoration:
+        BoxDecoration(
             image: DecorationImage(
               fit: BoxFit.cover,
               image: AssetImage(AppImage.background_Image),
