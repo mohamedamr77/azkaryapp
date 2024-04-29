@@ -1,11 +1,10 @@
 import 'package:azkary/core/text_core.dart';
-import 'package:azkary/ui/Rosary_%D9%8Dscreen.dart';
 import 'package:azkary/ui/qibla_screen.dart';
 import 'package:azkary/ui/time_praying_screen.dart';
 import 'package:flutter/material.dart';
-
 import '../../core/image_core.dart';
 import '../../ui/azkar_screen.dart';
+import '../../ui/sebha_screen.dart';
 import 'container_homepage.dart';
 
 class CustomHomeBody extends StatelessWidget {
@@ -66,7 +65,7 @@ class CustomHomeBody extends StatelessWidget {
             children: [
               CustomContainerHomePage(
                   onTap: (){
-                    Navigator.push(context, MaterialPageRoute(builder: (context) =>RosaryScreen(),));
+                    Navigator.push(context, MaterialPageRoute(builder: (context) =>sebhaScreen(),));
                   },
                 image: AppImage.arabic_Image,
                 text: AppText.elsabhaContainer_text

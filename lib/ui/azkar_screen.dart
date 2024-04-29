@@ -6,8 +6,6 @@ class AzkarScreen extends StatelessWidget{
   @override
   Widget build(BuildContext context) {
     return CustomAzkaryBody();
-
-
   }
 
 }

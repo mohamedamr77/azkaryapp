@@ -1,0 +1,1 @@
+// in azkary_details_body in directory azkary_details_widget

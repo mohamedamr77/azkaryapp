@@ -27,10 +27,10 @@ List<ModelAzkary> listAzkaryScreen=[
     title: AppText.pray_text ,
     image: AppImage.praying2_Image,
   ),
-  ModelAzkary(
-    title: AppText.airplane_text ,
-    image: AppImage.airplane_Image,
-  ),
+  // ModelAzkary(
+  //   title: AppText.airplane_text ,
+  //   image: AppImage.airplane_Image,
+  // ),
   ModelAzkary(
     title: AppText.eat_text ,
     image: AppImage.eat_Image,

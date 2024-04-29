@@ -12,45 +12,38 @@ class CustomAzkaryItem extends StatelessWidget {
     return GestureDetector(
       onTap:() {
         Navigator.push(context, MaterialPageRoute(builder: (context) =>
-            index==0?
-            CutomAzkaryDetails(
+            index==0? CutomAzkaryDetails(
            models: azkarList.where((title) =>title.title=="Morning Azkar" ).toList(),
            title_appbar: "اذكار الصباح",
         ):
-           index==1? CutomAzkaryDetails(
+            index==1? CutomAzkaryDetails(
               models: azkarList.where((title) =>title.title=="night Azkar" ).toList(),
               title_appbar: "اذكار المساء",
             ):
-            index==2?   CutomAzkaryDetails(
+            index==2? CutomAzkaryDetails(
               models: azkarList.where((title) =>title.title=="getOut Azkar" ).toList(),
               title_appbar: "اذكار الخروج",
             ):
-            index==3?  CutomAzkaryDetails(
+            index==3? CutomAzkaryDetails(
               models: azkarList.where((title) =>title.title=="getUp Azkar" ).toList(),
               title_appbar: "اذكار الاستيقاظ",
             ):
-            index==4?   CutomAzkaryDetails(
+            index==4? CutomAzkaryDetails(
               models: azkarList.where((title) =>title.title=="sleeping Azkar" ).toList(),
               title_appbar: "اذكار النوم",
             ):
-            index==5?   CutomAzkaryDetails(
+            index==5? CutomAzkaryDetails(
               models: azkarList.where((title) =>title.title=="afterPraying Azkar" ).toList(),
               title_appbar: "اذكار بعد الصلاة",
             ):
-            index==6?    CutomAzkaryDetails(
-              models: azkarList.where((title) =>title.title=="getOut Azkar" ).toList(),
-              title_appbar: "اذكار النوم",
+            index==6? CutomAzkaryDetails(
+              models: azkarList.where((title) =>title.title=="eating Azkar" ).toList(),
+              title_appbar: "اذكار الطعام",
             ):
-             index==7?   CutomAzkaryDetails(
-               models: azkarList.where((title) =>title.title=="eating Azkar" ).toList(),
-               title_appbar: "اذكار الطعام",
-             ):
-             CutomAzkaryDetails(
+                      CutomAzkaryDetails(
                models: azkarList.where((title) =>title.title=="islamic Azkar" ).toList(),
                title_appbar: "الرقيه الشرعيه",
-             )
-        )
-        );
+             )));
       },
       child: Container(
         margin: index==0?  EdgeInsets.only(
