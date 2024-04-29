@@ -48,15 +48,19 @@ class _SebhaBodyState extends State<SebhaBody> {
             SliverToBoxAdapter(
               child: GestureDetector(
                 onTap: () {
-                  setState(() {
+                  {
                     if (counter < 33) {
+                    setState(() {
                       counter++;
                       print(counter);
+                    });
                     } else {
                       // Reset counter if it reaches the maximum value
-                      counter = 0;
+                     setState(() {
+                       counter = 0;
+                     });
                     }
-                  });
+                  }
                 },
                 child: CircularViewer(
                   decoration: BoxDecoration(
