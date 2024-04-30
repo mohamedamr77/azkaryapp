@@ -59,7 +59,7 @@ class _CutomAzkaryDetailsState extends State<CutomAzkaryDetails> {
                 icon: Icon(Icons.arrow_back_ios_new, color: Colors.black),
                 onPressed: () {
                   Navigator.pop(context);
-                },
+
               ),
               elevation: 0,
               backgroundColor: Colors.transparent,
