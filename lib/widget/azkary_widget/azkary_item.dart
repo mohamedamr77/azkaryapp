@@ -13,7 +13,7 @@ class CustomAzkaryItem extends StatelessWidget {
       onTap:() {
         Navigator.push(context, MaterialPageRoute(builder: (context) =>
             index==0? CutomAzkaryDetails(
-           models: azkarList.where((title) =>title.title=="Morning Azkar" ).toList(),
+            models: azkarList.where((title) =>title.title=="Morning Azkar" ).toList(),
            title_appbar: "اذكار الصباح",
         ):
             index==1? CutomAzkaryDetails(
