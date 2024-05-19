@@ -108,10 +108,9 @@ class _CutomAzkaryDetailsState extends State<CutomAzkaryDetails> {
                           }
                         });
                       },
-
-
                       text: 'عدد مرات التكرار',
                       icon: GFBadge(
+                        color: Colors.brown,
                         child: Text(
                           "${zekrList[index].number}",
                           style: TextStyle(fontSize: 15),
