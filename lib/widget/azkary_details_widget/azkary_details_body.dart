@@ -73,6 +73,7 @@ class _CutomAzkaryDetailsState extends State<CutomAzkaryDetails> {
               center: Text("${(percentage * 100).toStringAsFixed(0)}%"),
             ),
             SizedBox(height: 10,),
+
             Expanded(child: ListView.separated(
               itemBuilder: (BuildContext context, int index) => Container(
                 child: Column(
@@ -125,7 +126,6 @@ class _CutomAzkaryDetailsState extends State<CutomAzkaryDetails> {
               separatorBuilder: (BuildContext context, int index) =>
                   SizedBox(height: 10),
               itemCount: zekrList.length,
-
             )
             )
           ],
@@ -134,76 +134,3 @@ class _CutomAzkaryDetailsState extends State<CutomAzkaryDetails> {
     );
   }
 }
-
-/*
-title: Text(
-                "${widget.title_appbar}",
-                style: TextStyle(
-                  color: Color(0xff84835A),
-                  fontSize: 25,
-                  fontFamily: "Tajawal",
-                  fontWeight: FontWeight.bold,
-                ),
-              ),
-              centerTitle: true,
-              leading: IconButton(
-                icon: Icon(Icons.arrow_back_ios_new, color: Colors.black),
-                onPressed: () {
-                  Navigator.pop(context);
-                },
-              ),
-              elevation: 0,
-              backgroundColor: Colors.transparent,
-              ),
- */
-
-
-/*
- itemBuilder: (BuildContext context, int index) => Container(
-                child: Column(
-                  textDirection: TextDirection.rtl,
-                  children: [
-                    Container(
-                      width: double.infinity,
-                      padding: EdgeInsets.all(10),
-                      decoration: BoxDecoration(
-                        color: Color(0xff9E9660),
-                        borderRadius: BorderRadius.circular(20),
-                      ),
-                      child: Text(
-                        '${zekrList[index].title.trim()}',
-                        textDirection: TextDirection.rtl,
-                      ),
-                    ),
-                    SizedBox(height: 10),
-                    GFButtonBadge(
-                      color: Color(0xff9E9660),
-                      onPressed: () {
-                        setState(() {
-                          if (zekrList[index].number > 0) {
-                            zekrList[index].number--;
-                            if (zekrList[index].number == 0) {
-                              percentCounter++;
-                            }
-                          }
-                        });
-                      },
-
-
-                      text: 'عدد مرات التكرار',
-                      icon: GFBadge(
-                        child: Text(
-                          "${zekrList[index].number}",
-                          style: TextStyle(fontSize: 15),
-                        ),
-                      ),
-                    ),
-                    SizedBox(height: 8),
-                    Divider(),
-                  ],
-                ),
-              ),
-              separatorBuilder: (BuildContext context, int index) =>
-                  SizedBox(height: 10),
-              itemCount: zekrList.length,
- */

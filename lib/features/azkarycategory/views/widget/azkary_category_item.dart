@@ -1,12 +1,15 @@
-import 'package:azkary/data_variable/azkaryscreen/list_azkary_screen.dart';
+import 'package:azkary/core/colorcore.dart';
+import 'package:azkary/features/azkarycategory/data_model/list_azkary_screen.dart';
 import 'package:flutter/material.dart';
 
-import '../../data_variable/list_azkar.dart';
-import '../../ui/azkary_details.dart';
-import '../azkary_details_widget/azkary_details_body.dart';
+import '../../../../data_variable/list_azkar.dart';
+import '../../../../ui/azkary_details.dart';
+import '../../../../widget/azkary_details_widget/azkary_details_body.dart';
 class CustomAzkaryItem extends StatelessWidget {
   int index;
    CustomAzkaryItem({super.key,required this.index});
+
+  get itemInItemAzkaryCategoryTextStyle => null;
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
@@ -46,24 +49,26 @@ class CustomAzkaryItem extends StatelessWidget {
              )));
       },
       child: Container(
-        margin: index==0?  EdgeInsets.only(
+
+        margin: index==0?  const EdgeInsets.only(
             left: 20,
             right: 20,
             top: 10,
-        ): index ==listAzkaryScreen.length-1? EdgeInsets.only(
+        ): index ==listAzkaryScreen.length-1? const EdgeInsets.only(
                  left: 20,
                  right: 20,
                  bottom: 20,
-               ): EdgeInsets.symmetric(
+               ): const EdgeInsets.symmetric(
                  horizontal: 20,
 
                ),
-        padding: EdgeInsets.symmetric(horizontal: 15),
-        //alignment: Alignment.centerRight,
+
+        padding: const EdgeInsets.symmetric(horizontal: 15),
+
         width: double.infinity,
         height: MediaQuery.of(context).size.height*0.13,
         decoration: BoxDecoration(
-          color: Colors.grey.withOpacity(0.5),
+          color: AppColor.greyColor.withOpacity(0.5),
           borderRadius: BorderRadius.circular(20),
         ),
         child: Center(
@@ -72,25 +77,26 @@ class CustomAzkaryItem extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.start,
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
+
               Image(image:AssetImage(listAzkaryScreen[index].image),
                 width: 80,
                 height: 80,
               ),
-              SizedBox(width: 8,),
-              VerticalDivider(
+
+             const SizedBox(width: 8,),
+
+             const VerticalDivider(
                 indent: 10,
                 endIndent: 10,
                 width: 30,
                 thickness: 2,
-                color: Colors.orange,
+                color: AppColor.orangeColor,
               ),
-              SizedBox(width: 8,),
+
+              const SizedBox(width: 8,),
+
               Text(listAzkaryScreen[index].title,
-                style: TextStyle(
-                    fontSize: 15,
-                    fontWeight: FontWeight.bold,
-                    fontFamily: "Tajawal"
-                ),
+                style: itemInItemAzkaryCategoryTextStyle,
               ),
             ],
           ),

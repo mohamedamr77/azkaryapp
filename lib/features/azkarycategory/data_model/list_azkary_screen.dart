@@ -1,6 +1,6 @@
 import 'package:azkary/core/image_core.dart';
 import 'package:azkary/core/text_core.dart';
-import 'package:azkary/data_variable/azkaryscreen/model_azkary_screen.dart';
+import 'package:azkary/features/azkarycategory/data_model/model_azkary_screen.dart';
 
 List<ModelAzkary> listAzkaryScreen=[
   ModelAzkary(

@@ -102,7 +102,8 @@ class _SebhaBodyState extends State<SebhaBody> {
                   Text(list[index],
                     style: TextStyle(
                         fontSize: 20,
-                        fontFamily: "Tajawal"
+                        fontFamily: "Tajawal",
+                        color:Colors.white,
                     ),
                   ),
                     style: ElevatedButton.styleFrom(

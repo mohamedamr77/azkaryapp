@@ -1,9 +1,11 @@
+import 'package:azkary/core/appsstyle.dart';
+import 'package:azkary/core/colorcore.dart';
 import 'package:azkary/core/image_core.dart';
-import 'package:azkary/data_variable/azkaryscreen/list_azkary_screen.dart';
+import 'package:azkary/features/azkarycategory/data_model/list_azkary_screen.dart';
 import 'package:flutter/material.dart';
-import 'azkary_item.dart';
-class CustomAzkaryBody extends StatelessWidget {
-  const CustomAzkaryBody({super.key});
+import 'widget/azkary_category_item.dart';
+class AzkaryCategoryScreen extends StatelessWidget {
+  const AzkaryCategoryScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -11,7 +13,7 @@ class CustomAzkaryBody extends StatelessWidget {
       extendBodyBehindAppBar: true,
          body: Container(
         decoration:
-        BoxDecoration(
+        const BoxDecoration(
             image: DecorationImage(
               fit: BoxFit.cover,
               image: AssetImage(AppImage.background_Image),
@@ -20,19 +22,15 @@ class CustomAzkaryBody extends StatelessWidget {
           child: CustomScrollView(
           slivers: [
            SliverAppBar(
-             title:Text(
+             title:const Text(
                "اذكار المسلم ",
-               style: TextStyle(
-                   color: Color(0xff84835A),
-                   fontSize: 25,
-                   fontFamily: "Tajawal",
-                   fontWeight: FontWeight.bold
-               ),
+               style: AppStyle.appBarTileTextStyle,
              ),
              centerTitle: true,
              leading: IconButton(
-               icon: Icon(  Icons.arrow_back_ios_new,
-                 color: Colors.black,),
+               icon: const Icon(  Icons.arrow_back_ios_new,
+                 color: AppColor.blackColor,
+               ),
                onPressed: (){
                  Navigator.pop(context);
                },
@@ -43,7 +41,7 @@ class CustomAzkaryBody extends StatelessWidget {
             SliverList.separated(
               itemBuilder: (context, index) => CustomAzkaryItem(index: index,),
               itemCount: listAzkaryScreen.length,
-              separatorBuilder: (BuildContext context, int index) => SizedBox(height: 10,) ,),
+              separatorBuilder: (BuildContext context, int index) => const SizedBox(height: 10,) ,),
           ],
         )
       ),
